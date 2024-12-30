@@ -129,7 +129,7 @@ STATIC_URL = '/static/'
 
 # If you're using a custom static directory
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / 'static',  # Make sure this directory exists
 ]
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'  # For production deployment

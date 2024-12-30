@@ -8,9 +8,8 @@ from django_distill import distill_path
 
 urlpatterns = [
     path('', views.home, name='home'),  # Set the root URL to point to the home view
-    distill_path('', views.home, name='home'),
+    distill_path('', views.home, name='home'),  # Using distill_path instead of path
     path('home/', views.home, name='home'),  # Optional: if you want to keep '/home/' too
-    path('admin/', admin.site.urls),
     path('about_me/', views.about_me, name='about_me'),
     path('portfolio/', views.portfolio, name='portfolio'),
     path('skills/', views.skills, name='skills'),
