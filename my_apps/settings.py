@@ -58,7 +58,11 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
+<<<<<<< HEAD
             BASE_DIR,  # Add the base directory to search for templates
+=======
+            BASE_DIR / 'my_apps/templates',  # Add this if needed
+>>>>>>> 5771dc7fb6d25e2f86a54dd1db84283445ac2b73
         ],
         'APP_DIRS': True,
         'OPTIONS': {
