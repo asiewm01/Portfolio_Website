@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Project, Skill
 
 def home(request):
-    return render(request, 'home.html')  # Make sure this template exists
+    return render(request, 'index.html')  # Make sure this template exists
 
 def about_me(request):
     return render(request, 'about_me.html')  
