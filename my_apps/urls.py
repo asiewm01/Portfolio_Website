@@ -3,9 +3,12 @@ from django.urls import path
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django_distill import distill_path
+
 
 urlpatterns = [
     path('', views.home, name='home'),  # Set the root URL to point to the home view
+    distill_path('', views.home, name='home'),
     path('home/', views.home, name='home'),  # Optional: if you want to keep '/home/' too
     path('admin/', admin.site.urls),
     path('about_me/', views.about_me, name='about_me'),
