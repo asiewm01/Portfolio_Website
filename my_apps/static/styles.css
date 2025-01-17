@@ -72,3 +72,22 @@ footer a {
     color: #d9534f;
     text-decoration: none;
 }
+
+/* Add border to navbar */
+.navbar {
+    border-bottom: 2px solid #dc3545;  /* Red border */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Add padding to the navbar items */
+.nav-item {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Change background to grey and text to red on hover */
+.navbar-nav .nav-link:hover {
+    background-color: #6c757d; /* Grey background on hover */
+    color: #dc3545; /* Red font color on hover */
+}

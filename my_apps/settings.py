@@ -12,7 +12,13 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
+import environ
 
+env = environ.Env()
+environ.Env.read_env()
+
+SECRET_KEY = env('SECRET_KEY')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,8 +32,7 @@ SECRET_KEY = 'django-insecure-gk=gbkl_^3so$a9azac2)*68lw=vb!_w6m*y$fci!zy6po!00j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['your-app-name.herokuapp.com', 'localhost']
 
 # Application definition
 
@@ -50,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Add this line
 ]
 
 ROOT_URLCONF = 'project.urls'
@@ -87,6 +93,7 @@ DATABASES = {
         'PASSWORD': 's8812371i',  # The MySQL password
         'HOST': 'localhost',  # Or use '127.0.0.1'
         'PORT': '3306',  # Default MySQL port
+        'default': dj_database_url.config(default='postgres://USER:PASSWORD@localhost:5432/your-db')
     }
 }
 
@@ -132,7 +139,9 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',  # Make sure this directory exists
 ]
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # For production deployment
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
