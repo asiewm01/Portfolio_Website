@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html").then(response => response.text()).then(data => document.getElementById("header").innerHTML = data);
+            fetch("nav.html").then(response => response.text()).then(data => document.getElementById("nav").innerHTML = data);
+            fetch("footer.html").then(response => response.text()).then(data => document.getElementById("footer").innerHTML = data);
+        });
+    </script>
+</head>
+<body>
+    <!-- Dynamic Header -->
+    <div id="header"></div>
+    
+    <!-- Dynamic Navigation -->
+    <div id="nav"></div>
+    
+    <!-- Main Content -->
+    <main class="container py-5">
+        <div class="row">
+            <!-- Column for the Image -->
+            <div class="col-md-6">
+                <img src="static/images/home_page_profile.jpg" alt="Arthur Siew" class="img-fluid">
+            </div>
+            
+            <!-- Column for the Text -->
+            <div class="col-md-6">
+                <h2><u>Hi, I am Arthur Siew</u></h2>
+                <p>I am a passionate junior web developer with a strong foundation in both front-end and back-end technologies. My journey into web development began with my background in digital marketing, specifically SEO, where I honed my problem-solving and technical skills. I’ve always been fascinated by the potential of technology to solve real-world problems, and this sparked my transition into the world of web development.</p>
+                <p>With a solid grounding in HTML, CSS, JavaScript, and Python, I specialize in full-stack development. I have experience working with modern frameworks like React for the front-end and Django for the back-end. I am particularly interested in building scalable and responsive web applications that are not only functional but also user-friendly and visually appealing.</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <p>In addition to my technical skills, I am deeply motivated by the idea of continuous learning and growth. I believe that technology is an ever-evolving field, and I am committed to staying up to date with the latest trends and innovations. Currently, I am furthering my education at Lithan Academy, where I am working towards a Specialist Diploma in Software Engineering. I am also exploring emerging technologies like Web3, Blockchain, and Cloud Computing, which I believe will shape the future of the digital landscape.</p>
+                <p>As I continue to expand my skill set, my ultimate goal is to leverage my expertise in web development, blockchain, and cloud technologies to build innovative solutions that can have a meaningful impact across industries. I am particularly passionate about how these technologies can contribute to improving sectors like agriculture, sustainability, and healthcare.</p>
+                <p>If you'd like to discuss a potential project or learn more about my work, feel free to reach out via <a href="mailto:arthur@sunburst.farm">email</a>, or you can connect with me on <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a> or view my work on <a href="https://github.com/yourgithub" target="_blank">GitHub</a>.</p>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Dynamic Footer -->
+    <div id="footer"></div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

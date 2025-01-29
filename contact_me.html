@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - My Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html").then(response => response.text()).then(data => document.getElementById("header").innerHTML = data);
+            fetch("nav.html").then(response => response.text()).then(data => document.getElementById("nav").innerHTML = data);
+            fetch("footer.html").then(response => response.text()).then(data => document.getElementById("footer").innerHTML = data);
+        });
+    </script>
+</head>
+<body>
+    <!-- Dynamic Header -->
+    <div id="header"></div>
+    
+    <!-- Dynamic Navigation -->
+    <div id="nav"></div>
+    
+    <!-- Main Content -->
+    <main class="container py-5">
+        <h2><u>Contact Me</u></h2>
+        <p>I'm always open to new opportunities, collaborations, or even just a friendly conversation about web development, technology, and other related fields. If you have any questions or would like to discuss a project, feel free to reach out to me using the form below or through the contact information provided.</p>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h3><u>Send a Message</u></h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h3><u>Contact Information</u></h3>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:arthur@sunburst.farm">arthur@sunburst.farm</a>, <a href="mailto:siewmj@gmail.com">siewmj@gmail.com</a></li>
+                    <li><strong>Phone:</strong> <a href="tel:+6592702017">+65 9270 2017</a></li>
+                    <li><strong>WhatsApp:</strong> <a href="https://wa.me/6592702017" target="_blank">+65 9270 2017</a></li>
+                </ul>
+                <p>Whether you have a question, a business proposal, or just want to chat, don’t hesitate to reach out. I look forward to hearing from you!</p>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Dynamic Footer -->
+    <div id="footer"></div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

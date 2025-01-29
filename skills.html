@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - My Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html").then(response => response.text()).then(data => document.getElementById("header").innerHTML = data);
+            fetch("nav.html").then(response => response.text()).then(data => document.getElementById("nav").innerHTML = data);
+            fetch("footer.html").then(response => response.text()).then(data => document.getElementById("footer").innerHTML = data);
+        });
+    </script>
+</head>
+<body>
+    <!-- Dynamic Header -->
+    <div id="header"></div>
+    
+    <!-- Dynamic Navigation -->
+    <div id="nav"></div>
+    
+    <!-- Main Content -->
+    <main class="container py-5">
+        <h2>Skills</h2>
+        <p>
+            As a web developer with a diverse background, I have built a solid foundation in both front-end and back-end technologies. Over the years, I have worked with various tools and frameworks to develop dynamic, responsive, and user-friendly web applications.
+        </p>
+        <p>
+            Beyond development, I have hands-on experience with version control, cloud platforms, containerization, and deployment services. Additionally, my knowledge in digital marketing (SEO, Google Ads, Social Media) allows me to optimize websites for better reach and engagement.
+        </p>
+        
+        <h3>Technologies</h3>
+        <ul style="list-style-type: none; display: flex; gap: 30px; padding: 40px 0; justify-content: center;">
+            <li><img src="static/images/html.jpg" alt="HTML" class="img-fluid" style="max-width: 70px;"></li>
+            <li><img src="static/images/css.jpg" alt="CSS" class="img-fluid" style="max-width: 70px;"></li>
+            <li><img src="static/images/js.jpg" alt="JavaScript" class="img-fluid" style="max-width: 70px;"></li>
+            <li><img src="static/images/python.jpg" alt="Python" class="img-fluid" style="max-width: 70px;"></li>
+            <li><img src="static/images/django.jpg" alt="Django" class="img-fluid" style="max-width: 70px;"></li>
+            <li><img src="static/images/mysql.jpg" alt="MySQL" class="img-fluid" style="max-width: 70px;"></li>
+            <li><img src="static/images/react.jpg" alt="React" class="img-fluid" style="max-width: 70px;"></li>
+        </ul>
+
+        <h3>Technical Skills</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Technology</th>
+                    <th>Proficiency</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>HTML5</td><td>Expert</td><td>Semantic, accessible, and responsive web pages.</td></tr>
+                <tr><td>CSS3</td><td>Expert</td><td>Responsive and visually appealing layouts.</td></tr>
+                <tr><td>JavaScript</td><td>Intermediate</td><td>Interactive web pages and ES6+ features.</td></tr>
+                <tr><td>React.js</td><td>Intermediate</td><td>Dynamic UI with hooks and context API.</td></tr>
+                <tr><td>Python</td><td>Expert</td><td>Backend development with Django.</td></tr>
+                <tr><td>Django</td><td>Expert</td><td>Full-stack web development.</td></tr>
+                <tr><td>Node.js</td><td>Intermediate</td><td>API and server-side scripting.</td></tr>
+                <tr><td>MySQL</td><td>Intermediate</td><td>Database management and query optimization.</td></tr>
+                <tr><td>Git & GitHub</td><td>Basic</td><td>Version control and collaboration.</td></tr>
+                <tr><td>Heroku & Netlify</td><td>Basic</td><td>Deployment platforms.</td></tr>
+            </tbody>
+        </table>
+    </main>
+    
+    <!-- Dynamic Footer -->
+    <div id="footer"></div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

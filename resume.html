@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - My Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html").then(response => response.text()).then(data => document.getElementById("header").innerHTML = data);
+            fetch("nav.html").then(response => response.text()).then(data => document.getElementById("nav").innerHTML = data);
+            fetch("footer.html").then(response => response.text()).then(data => document.getElementById("footer").innerHTML = data);
+        });
+    </script>
+</head>
+<body>
+    <!-- Dynamic Header -->
+    <div id="header"></div>
+    
+    <!-- Dynamic Navigation -->
+    <div id="nav"></div>
+    
+    <!-- Main Content -->
+    <main class="container py-5">
+        <header class="header text-center">
+            <h1 style="text-decoration: underline;">Arthur Siew Ming Jiang's Resume</h1>
+            <p>Email: <a href="mailto:arthur@sunburst.farm">arthur@sunburst.farm</a>, <a href="mailto:siewmj@gmail.com">siewmj@gmail.com</a></p>
+            <p>Phone: <a href="tel:+6592702017">+65 9270 2017</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a> | GitHub: <a href="https://github.com/yourgithub" target="_blank">GitHub</a></p>
+        </header>
+
+        <section class="education">
+            <h2>Education</h2>
+            <table class="table">
+                <tr>
+                    <td><strong>Master of Science in Computer Science</strong></td>
+                    <td>Marconi University (2024-Present)</td>
+                </tr>
+                <tr>
+                    <td><strong>Diploma in Web3 Engineering and Solidity Programming</strong></td>
+                    <td>Methana (Expected 2025)</td>
+                </tr>
+                <tr>
+                    <td><strong>Specialist Diploma in Software Engineering</strong></td>
+                    <td>Lithan Academy (2024)</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="experience">
+            <h2 class="text-decoration-underline">Professional Experience</h2>
+            <h3>SEO Specialist</h3>
+            <table class="table">
+                <tr><td><strong>Company</strong></td><td>SEO Agency</td></tr>
+                <tr><td><strong>Duration</strong></td><td>2017-2019</td></tr>
+                <tr><td><strong>Key Responsibilities</strong></td>
+                    <td>
+                        <ul>
+                            <li>Led site speed optimization for various industries.</li>
+                            <li>Improved website performance and optimized content delivery.</li>
+                            <li>Implemented SEO strategies to enhance search visibility.</li>
+                            <li>Managed client relationships and reporting.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+
+            <h3>Food Delivery Operations (During COVID-19)</h3>
+            <table class="table">
+                <tr><td><strong>Company</strong></td><td>Freelance</td></tr>
+                <tr><td><strong>Duration</strong></td><td>2019-2024</td></tr>
+                <tr><td><strong>Key Responsibilities</strong></td>
+                    <td>
+                        <ul>
+                            <li>Worked in food delivery operations during the pandemic.</li>
+                            <li>Optimized delivery processes and logistics efficiency.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+
+            <h3>Agriculture and Aquaculture Investment (Post-COVID)</h3>
+            <table class="table">
+                <tr><td><strong>Company</strong></td><td>Entrepreneur</td></tr>
+                <tr><td><strong>Duration</strong></td><td>2020-2024</td></tr>
+                <tr><td><strong>Key Responsibilities</strong></td>
+                    <td>
+                        <ul>
+                            <li>Invested in shrimp farming and aquaculture research.</li>
+                            <li>Managed investments and research on water quality and sustainability.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="aspirations">
+            <h2>Future Aspirations</h2>
+            <p>To continue exploring and mastering Web3, Solidity, Cloud technologies, and AI. I aim to work on projects that leverage IoT, AI, and blockchain to solve real-world challenges.</p>
+        </section>
+    </main>
+    
+    <!-- Dynamic Footer -->
+    <div id="footer"></div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
